@@ -227,7 +227,7 @@ def load_data(root, set_type):
         path_2 = glob.glob(root + "\\" + set_type + "\\" + cl + "\\*")
         for img in path_2:
             labels.append(label)
-            img = cv2.imread(img)[:, :, ::-1]
+            img = cv2.imread(img)
             img = cv2.resize(img, (64, 64))
             images.append(img)
     images = np.array(images)
